@@ -15,12 +15,6 @@ export const Container = styled.div`
 export const Section = styled.div`
   place-items: center; 
   padding: 0rem 3.5rem 2rem;
-
-  img {
-    height: 264px;
-    width: 264px;
-    max-width: 100%;
-  }
 `;
 
 
@@ -35,15 +29,17 @@ export const Back = styled.button`
   margin-bottom: 16px;
   justify-self: start;
   align-items: center;
-
-  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    margin-left: 80px;
-  }
 `;
 
 
 export const Content = styled.div`
   text-align: center;
+  max-width: 1368px;
+
+  .edit {
+    margin-top: 24px; 
+    margin: 24px auto;
+  }
 
   h2 {
     margin-top: 16px;
@@ -58,6 +54,12 @@ export const Content = styled.div`
     width: 100%;
   }
 
+  img {
+    width: 264px;
+    height: 264px;
+    margin: 0 auto;
+  }
+
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     display: flex;
     height: 390px;
@@ -66,6 +68,10 @@ export const Content = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 42px;
+
+    .edit {
+      margin: 24px 0 0 0;
+    }
 
     img {
       width: 390px;
@@ -89,6 +95,14 @@ export const IngredientsSection = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 24px;
+
+  span {
+    background-color: ${({ theme }) => theme.COLORS.DARK_1000};
+    font-family: ${({ theme }) => theme.FONTS.POPPINS[100].fontFamily};
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     display: flex;

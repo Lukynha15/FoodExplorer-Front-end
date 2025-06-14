@@ -6,5 +6,4 @@ export const Container = styled.div`
   border-radius: 5px;
   padding: 4px 8px;
   font-size: 14px;
-
 `;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const MobileContainer = styled.div`
   display: flex;
@@ -14,8 +13,8 @@ export const MobileContainer = styled.div`
   h1 {
     font-family: ${({ theme }) => theme.FONTS.ROBOTO.fontFamily};
     font-weight: 600;
-    align-items: center;
     display: flex;
+    align-items: center;
     gap: 10px;
     font-size: 21px;
   }
@@ -32,30 +31,49 @@ export const MobileContainer = styled.div`
     height: 24px;
   }
 
-  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    margin: 0 auto;
+  .title {
+    position: relative;
   }
 
+  a {
+    background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    cursor: none;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+    border-radius: 50%;
+    position: absolute;
+    right: 24px;
+    top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const DesktopContainer = styled.div`
   display: flex;
   background-color: ${({ theme }) => theme.COLORS.DARK_700};
   align-items: center;
-
+  justify-content: space-around;
+  gap: 32px;
 
   height: 114px;
-  width: 100%;
   padding: 24px 123px;
-  justify-content: space-around;
+
+  Input {
+    width: 570px;
+  }
 
   h1 {
     font-family: ${({ theme }) => theme.FONTS.ROBOTO.fontFamily};
     font-weight: 600;
-    align-items: center;
     display: flex;
+    align-items: center;
+    font-size: 15px;
     gap: 10px;
-    font-size: 21px;
   }
 
   h1 > svg {
@@ -68,5 +86,33 @@ export const DesktopContainer = styled.div`
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
     width: 24px;
     height: 24px;
+  }
+
+  ${({ isAdmin, theme }) => isAdmin && `
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: center;
+      
+    }
+
+    span {
+      color: ${theme.COLORS.CAKE_200};
+      font-family: ${theme.FONTS.ROBOTO.smallest_regular.fontFamily};
+      font-size: 12px;
+      font-weight: 400; 
+    }
+  `}
+
+  input {
+    height: 48px;
+    background-color: ${({ theme }) => theme.COLORS.DARK_900};
+    border: none;
+    border-radius: 8px;
+    padding: 0 40px;
+    gap: 8px;
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+    font-family: ${({ theme }) => theme.FONTS.ROBOTO.small_regular.fontFamily};
   }
 `;

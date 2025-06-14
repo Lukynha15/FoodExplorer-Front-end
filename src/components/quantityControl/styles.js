@@ -5,15 +5,20 @@ export const Container = styled.div`
   align-items: center;
   gap: 14px;
 
+  width: 100px;
+
   button {
     background: none;
     border: none;
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
     cursor: pointer;
+    width: 24px;
+    height: 24px;
   }
 
-  span {
-    color: ${({ theme }) => theme.COLORS.LIGHT_100};
-    font-size: 16px;
+  .quantity {
+    color: ${({ theme }) => theme.COLORS.LIGHT_300};
+    font-size: 20px;
+    align-items: center;
   }
 `;

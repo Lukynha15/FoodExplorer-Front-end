@@ -19,6 +19,11 @@ export const Back = styled.button`
   justify-self: start;
   align-items: center;
   margin-left: 28px;
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+
+    margin-left: 200px;
+  }
 `;
 
 export const Form = styled.form`
@@ -33,7 +38,22 @@ export const Form = styled.form`
   }
 
   Input {
-    width: 100%;
+
+  }
+
+  .delete {
+    background-color: ${({ theme }) => theme.COLORS.DARK_800};
+    max-width: 160px;
+  }
+
+  .save{
+    max-width: 160px;
+  }
+
+  #conclusion-button {
+    display: flex;
+    justify-content: space-between;
+    gap: 32;
   }
 
   textarea {
@@ -44,21 +64,63 @@ export const Form = styled.form`
     width: 100%;
     margin-bottom: 24px;
   }
-
-  .decision {
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
-
-    .delete {
-      background-color: ${({ theme }) => theme.COLORS.DARK_800};
-    }
+  
+  .label-file {
+    display: none;
   }
 
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
     display: flex;
     width: 1120px;
-    margin: 0 auto;
+
+    .line-one {
+      display: flex;
+      height: 80px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .line-two {
+      display: flex;
+      height: 80px;
+      align-items: center;
+      justify-content: space-between;
+
+      #price {
+        width: 222px !important;
+      }
+    }
+
+    input {
+      height: 48px;
+      border: none;
+      border-radius: 8px;
+      color: ${({ theme }) => theme.COLORS.LIGHT_100};
+      font-family: ${({ theme }) => theme.FONTS.ROBOTO.small_regular.fontFamily};
+      width: 463px;
+    }
+
+    .label-file {
+      margin-bottom: 20px;
+      font-family: ${({ theme }) => theme.FONTS.ROBOTO.small_regular.fontFamily};
+      color: ${({ theme }) => theme.COLORS.LIGHT_400};
+      align-items: start;
+      justify-content: start;
+      text-align: start;
+      display: flex;
+    }
+
+    #conclusion-button {
+      display: flex;
+      align-items: center !important;
+      justify-content: end !important;
+      width: 1120px;
+      gap: 32px;
+    }
+
+    #save-changes {
+      width: 172px;
+    }
   }
 `;
 
@@ -67,6 +129,7 @@ export const Photo = styled.div`
   flex-direction: column;
   gap: 12px;
   position: relative;
+  margin-bottom: 24px;
 
   input[type="file"] {
     display: none;
@@ -91,12 +154,42 @@ export const Photo = styled.div`
     &:hover {
       background-color: ${({ theme }) => theme.COLORS.DARK_200};
     }
+
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    height: 48px;
+    width: 229px;
+    align-items: center;
+    justify-content: center;
+    
+    .UploadImage {
+      width: 229px;
+      position: absolute;
+      left: 0px;
+      top: 25px;
+    }
+
+    .input-wrapper {
+      width: 100%;
+      display: none;
+    }
   }
 `;
 
 export const Section = styled.div`
   label {
-    margin-bottom: 16px;
+    color: ${({ theme }) => theme.COLORS.LIGHT_400};
+  }
+
+  margin-bottom: 20px;
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    width: 837px;
+
+    label {
+      margin-bottom: -5px;
+    }
   }
 `;
 
@@ -111,5 +204,11 @@ export const IngredientsTags = styled.div`
 
   > div {
     margin: 0;
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    width: 837px;
+    margin-bottom: 10px;
+    height: 48px;
   }
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.button`
   width: 316px;
@@ -11,6 +12,9 @@ export const Container = styled.button`
   padding: 0 16px;
   border-radius: 5px;
   font-weight: 400;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 
   font-size: 14px;
 
@@ -18,5 +22,14 @@ export const Container = styled.button`
     opacity: 1;
     filter: grayscale(0.7) brightness(1.3);
     cursor: not-allowed;
+  }
+
+  &:danger {
+    background-color: ${({ theme }) => theme.COLORS.DARK_800};
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    width: 216px;
+    height: 48px;
   }
 `;

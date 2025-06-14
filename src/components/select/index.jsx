@@ -1,17 +1,14 @@
-import { useState } from 'react';
 import { SelectContainer, Label, Select, Option } from './styles';
 
-export function CustomSelect() {
-  const [selectedOption, setSelectedOption] = useState('');
-
-  const handleChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
-
+export function CustomSelect({ value, onChange }) {
   return (
     <SelectContainer>
       <Label htmlFor="dishes">Categoria</Label>
-      <Select id="dishes" value={selectedOption} onChange={handleChange}>
+      <Select
+        id="dishes"
+        value={value}
+        onChange={e => onChange(e.target.value)}
+      >
         <Option value="">Selecione...</Option>
         <Option value="pratos">Pratos</Option>
         <Option value="bebidas">Bebidas</Option>
@@ -20,3 +17,4 @@ export function CustomSelect() {
     </SelectContainer>
   );
 }
+

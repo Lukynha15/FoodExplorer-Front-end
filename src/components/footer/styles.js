@@ -34,7 +34,7 @@ export const Main = styled.div`
     justify-content: space-around;
     align-items: center;
     padding: 29px 0px;
-    width: 100%;
+
   }
 `;
 

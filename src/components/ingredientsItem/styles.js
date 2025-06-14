@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
   align-items: center;
@@ -39,5 +40,9 @@ export const Container = styled.div`
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.LIGHT_500};
     }
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+
   }
 `;

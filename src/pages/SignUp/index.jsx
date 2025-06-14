@@ -22,6 +22,7 @@ export function SignUp() {
     api.post("/users", { name, email, password })
       .then(() => {
         alert("Usuário cadastrado com sucesso!");
+        console.log( { name, email, password });
         navigate("/");
       })
       .catch(error => {
@@ -65,7 +66,7 @@ export function SignUp() {
           minLength={6}
         />
         <Button title="Cadastrar" onClick={handleSignUp}  />
-        <ButtonText title="Já tenho uma conta" />
+        <ButtonText title="Já tenho uma conta" onClick={() => navigate("/")} />
       </Form>
     </Container>
   );

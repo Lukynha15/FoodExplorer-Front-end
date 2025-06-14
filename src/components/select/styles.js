@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints';
 
 export const SelectContainer = styled.div`
   display: flex;
@@ -28,6 +29,11 @@ export const Select = styled.select`
   &:focus {
     border-color: #007bff;
     outline: none;
+  }
+
+  @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
+    width: 364px;
+    margin-bottom: 10px;
   }
 `;
 

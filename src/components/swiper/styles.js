@@ -21,14 +21,26 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  span {
-    display: none;
+  .button-add {
+    width: 162px ;
+    background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
+    color: ${({ theme }) => theme.COLORS.LIGHT_100};
+    font-family: ${({ theme }) => theme.FONTS.POPPINS[100].fontFamily};
+
+    height: 32px ;
+    border: 0;
+    padding: 16px ; 
+    border-radius: 5px;
+    font-weight: 400;
+    align-items: center ;
+    display: flex ;
+    justify-content: center;
+    font-size: 14px;
   }
 
-  Button {
-    width: 162px;
-    height: 32px;
-    margin-top: 12px;
+  .description {
+    display: none;
+    height: 50px;
   }
 
   h2 {
@@ -65,13 +77,24 @@ export const Container = styled.div`
     }
   }
 
+  .select {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
   @media (min-width: ${DEVICE_BREAKPOINTS.LG}) {
-    width: 304px;
-    height: 462px;
+    width: 304px ;
+    height: 462px ;
 
     img {
     width: 176px;
     height: 176px;
+    }
+
+    .description {
+      display: flex;
     }
 
     h2 {
@@ -86,7 +109,7 @@ export const Container = styled.div`
     }
 
     span {
-      display: block;
+      display: flex ;
       color: ${({ theme }) => theme.COLORS.LIGHT_400};
       font-family: ${({ theme }) => theme.FONTS.ROBOTO.smaller_regular.fontFamily};
       font-size: 14px;
@@ -94,9 +117,26 @@ export const Container = styled.div`
     }
 
     .select {
-      
+      display: flex ;
+      align-items: center;
+      justify-content: center;
     }
-    
-  }
 
+    .button-add {
+      width: 92px ;
+      background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
+      color: ${({ theme }) => theme.COLORS.LIGHT_100};
+      font-family: ${({ theme }) => theme.FONTS.POPPINS[100].fontFamily};
+
+      height: 48px ;
+      border: 0;
+      padding: 16px ; 
+      border-radius: 5px;
+      font-weight: 400;
+      align-items: center ;
+      display: flex ;
+      justify-content: center;
+      font-size: 14px;
+    }
+}
 `;
