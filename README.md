@@ -34,7 +34,7 @@ Todo o estilo do projeto foi implementado com **Styled-Components**, possibilita
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/foodexplorer-frontend.git
+git clone https://github.com/Lukynha15/FoodExplorer-Front-end.git
 cd foodexplorer-frontend
 ```
 
@@ -61,7 +61,7 @@ http://localhost:5173
 ```
 
 ⚠️ **Observação:**  
-Este front-end consome a API hospedada no repositório: [FoodExplorer - Back-End](https://github.com/seu-usuario/foodexplorer-back-end).
+Este front-end consome a API hospedada no repositório: [FoodExplorer - Back-End](https://github.com/Lukynha15/FoodExplorer-Back-end).
 
 ### Variáveis de Ambiente `.env`
 
@@ -95,15 +95,6 @@ src/
 | **react-icons**      | Biblioteca de ícones                           |
 | **swiper**           | Slider de pratos (carrossel)                   |
 
-## 📝 To-Do
-
-- [ ] Implementar testes unitários
-- [ ] Melhorar acessibilidade (a11y)
-- [ ] Suporte a internacionalização (i18n)
-
-## 🤝 Contribuição
-
-Sinta-se à vontade para abrir issues ou pull requests.
 
 ## 🛡️ Licença
 
